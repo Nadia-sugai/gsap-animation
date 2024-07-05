@@ -1,0 +1,33 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.is-pc {
+  display: block;
+  @include mq() {
+    display: none;
+  }
+}
+.is-sp {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
+.is-tab {
+  display: none;
+  @include mq(tab, max, true) {
+    display: block;
+  }
+}
+.is-only-tab {
+  display: none;
+  @media (min-width: 768px) and (max-width: 1200px) {
+    display: block;
+  }
+}
+.is-only-pc {
+  display: none;
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}

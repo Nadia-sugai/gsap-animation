@@ -1,0 +1,17 @@
+// Breakpoints
+$mq-breakpoints: (
+  "wide": 1366px,
+  "tab": 1100px,
+  "medium": 768px,
+);
+
+// Fonts
+$base-font-family: "Noto Sans JP", sans-serif;
+$ttl-font-family: "Work Sans", sans-serif;
+$sub-ttl-font-family: "Zen Kaku Gothic Antique", sans-serif;
+$Cormorant-font-famliy: "Cormorant Garamond", serif;
+
+// Colors
+$ttl-text-color: #003296;
+$base-text-color: #081d4f;
+$bg-color: #f5f7fc;
