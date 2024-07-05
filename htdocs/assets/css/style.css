@@ -376,7 +376,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   line-height: 1;
-  color: #081d4f;
+  color: #bbbaa6;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
@@ -389,7 +389,7 @@ h4 {
 }
 
 a {
-  color: #081d4f;
+  color: #bbbaa6;
   text-decoration: none;
 }
 
@@ -415,9 +415,54 @@ dd {
   margin: 0;
 }
 
-h1 {
-  font-size: 20px;
-  color: #000;
+.mv {
+  width: 100%;
+  height: 100dvh;
+}
+.mv-wrap {
+  contain: content;
+  background-color: #0e100f;
+}
+.mv-inner {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, min-content);
+}
+.mv-txt {
+  display: grid;
+  height: 100dvh;
+  gap: 5px;
+  grid-template-columns: repeat(12, min-content);
+  justify-content: center;
+}
+.mv-txt__item {
+  display: flex;
+  align-items: center;
+  font-size: 80px;
+  color: #fff;
+}
+.mv-scroll__down {
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  inset: 0;
+  margin: auto;
+  color: #fff;
+  font-size: 64px;
+}
+
+#top {
+  background-color: #0e100f;
+}
+#top .main-content {
+  width: 100%;
+}
+#top .main-content__wrap {
+  display: grid;
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map*/
