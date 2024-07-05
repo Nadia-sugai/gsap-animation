@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+.mv {
+  width: 100%;
+  height: 100dvh;
+  &-wrap {
+    contain: content;
+    background-color: $bg-color;
+  }
+  &-inner {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, min-content);
+  }
+  &-txt {
+    display: grid;
+    height: 100dvh;
+    gap: 5px;
+    grid-template-columns: repeat(12, min-content);
+    justify-content: center;
+    &__item {
+      display: flex;
+      align-items: center;
+      font-size: 80px;
+      color: $ttl-text-color;
+    }
+  }
+  &-scroll__down {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    inset: 0;
+    margin: auto;
+    color: $ttl-text-color;
+    font-size: 64px;
+  }
+}

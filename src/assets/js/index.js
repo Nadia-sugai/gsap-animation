@@ -1,5 +1,5 @@
 import "../../assets/scss/app.scss";
-import Anim from "./utils/example";
+import Anim from "./utils/gsap-timeline";
 
 class Main {
   constructor(){

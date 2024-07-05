@@ -1,6 +1,15 @@
-@charset "UTF-8";
+@use "../abstracts" as *;
 
-h1 {
-  font-size: 20px;
-  color: #000;
+#top {
+  background-color: $bg-color;
+  .main-content {
+    width: 100%;
+    &__wrap {
+      display: grid;
+      gap: 30px;
+      width: 80%;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+  }
 }
