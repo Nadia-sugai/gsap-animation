@@ -6284,8 +6284,8 @@ class Anim {
       {
         duration: 1,
         opacity: 0,
-        repeat: -1,
-        yoyo: true,
+        repeat: -1,//無限に繰り返す
+        yoyo: true,//アニメーションが完了したら逆再生
       }
     )
   }
