@@ -4,12 +4,32 @@
   background-color: $bg-color;
   .main-content {
     width: 100%;
+    margin-bottom: 300px;
     &__wrap {
       display: grid;
       gap: 30px;
       width: 80%;
       margin: 0 auto;
       line-height: 1.5;
+    }
+  }
+  .overlap-layout {
+    width: 100%;
+    &__item {
+      width: 100dvw;
+      height: 100dvh;
+      &[data-img="01"] {
+        background: url("/assets/img/overlap-bg01.jpg") left top / cover
+          no-repeat;
+      }
+      &[data-img="02"] {
+        background: url("/assets/img/overlap-bg02.jpg") left top / cover
+          no-repeat;
+      }
+      &[data-img="03"] {
+        background: url("/assets/img/overlap-bg03.jpg") left top / cover
+          no-repeat;
+      }
     }
   }
 }

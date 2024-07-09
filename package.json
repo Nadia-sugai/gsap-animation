@@ -7,9 +7,11 @@
     "watch": "run-p watch:*",
     "watch:webpack": "npm run webpack -- -w",
     "watch:pug": "onchange -i \"src/**/*.pug\" -- npm run pug",
+    "watch:images": "onchange -i \"src/assets/images/**/*.{jpg,jpeg,png,gif,svg}\" -- npm run imagemin {{changed}}",
     "serve": "browser-sync start -c bs-config.js",
     "webpack": "webpack --mode=development",
-    "pug": "pug src -o htdocs -P"
+    "pug": "pug src -o htdocs -P",
+    "imagemin": "node imagemin.js"
   },
   "devDependencies": {
     "@babel/core": "^7.24.7",
@@ -19,6 +21,12 @@
     "core-js": "^3.37.1",
     "css-loader": "^7.1.2",
     "gsap": "^3.12.5",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webp": "^8.0.0",
     "mini-css-extract-plugin": "^2.9.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",

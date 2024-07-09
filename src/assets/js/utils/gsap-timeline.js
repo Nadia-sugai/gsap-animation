@@ -2,14 +2,14 @@
 import { gsap } from "gsap";
 
 
-class Anim {
+class mvAnim {
   constructor(){
     this.tl = gsap.timeline({
       duration: 2,
     });
   this.bundle();
   }
-  FadeIn() {
+  timeline() {
     this.tl.from(".mv-txt__item",
       {
         y: 50,
@@ -57,9 +57,9 @@ class Anim {
   }
 
   bundle(){
-    this.FadeIn();
+    this.timeline();
   }
 
 }
 
-export default Anim;
+export default mvAnim;
