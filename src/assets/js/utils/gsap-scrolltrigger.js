@@ -5,13 +5,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 class scrollTriggerAnim {
   constructor(){
     gsap.registerPlugin(ScrollTrigger);//gsapにscrollTriggerを使えるように
-    this.elements = document.querySelectorAll(".overlap-layout__item");
+    this.targets = gsap.utils.toArray(".overlap-layout__item");//同クラス名の要素を配列に
     this.tl = gsap.timeline();
     ScrollTrigger.create({
       animation: this.tl,
       trigger: ".overlap-layout",
       start: "top top",
-      end: "+=" + this.elements.length * this.elements[0].offsetHeight * "2",//重ねる要素の高さの総量
+      end: "+=" + this.targets.length * this.targets[0].offsetHeight * "2",//重ねる要素の高さの総量
       pin: true,//要素を固定
       scrub: true,//スクロール量によってアニメーションを変化
       markers: true,
@@ -33,25 +33,17 @@ class scrollTriggerAnim {
     })
   }
   pin(){
-    this.tl.from(".is-first", {
-      duration: 0.5,
-      opacity: 0,
-    })
-
-    this.tl.add(() => {}, "+=1");
-
-    this.tl.from(".is-second", {
-      opacity: 0,
-      yPercent: 100,
-    })
-
-    this.tl.add(() => {}, "+=1");
-
-    this.tl.from(".is-third", {
-      opacity: 0,
-      yPercent: 100,
+    this.targets.forEach((target) =>{
+      this.tl.from(target, {
+        opacity: 0,
+        yPercent: 100,  
+      })
+      this.tl.add(() => {}, "+=1");
     })
   }
+  // snap(){
+    
+  // }
 
   bundle(){
     this.FadeIn();

@@ -56,4 +56,36 @@
       }
     }
   }
+  .snap {
+    margin: 300px 0;
+    &-ttl {
+      font-size: 40px;
+      text-align: center;
+      color: $ttl-text-color;
+    }
+    &-content {
+      width: 80%;
+      margin: 20px auto 0;
+      border-radius: 30px;
+      background-image: linear-gradient(
+        180deg,
+        rgba(144, 245, 154, 1),
+        rgba(4, 202, 255, 1)
+      );
+    }
+    &-content__item {
+      display: grid;
+      padding: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-content__item .img img {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+    &-content__item .txt {
+      background-color: #fff;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+  }
 }
